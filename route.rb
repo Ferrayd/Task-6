@@ -7,11 +7,11 @@ class Route
   def initialize(from, to)
     @stations = [from, to]
     register_instance
-    self.class.list << self
+    self.class.all << self
   end
 
-  def self.list
-    @@list ||= []
+  def self.all
+    @@all ||= []
   end
 
   def add_station(station)

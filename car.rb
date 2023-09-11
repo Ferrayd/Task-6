@@ -6,24 +6,10 @@ class Car
 
   def initialize(number)
     @number = number
-    self.class.list << self
+    self.class.all << self
   end
 
-  def self.list
-    @@list ||= []
-  end
-end
-
-class PassengerCar < Car
-  def initialize(number)
-    super
-    @type = :passenger
-  end
-end
-
-class CargoCar < Car
-  def initialize(number)
-    super
-    @type = :cargo
+  def self.all
+    @@all ||= []
   end
 end

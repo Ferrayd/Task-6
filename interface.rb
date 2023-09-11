@@ -113,7 +113,7 @@ class TrainApp
       return
     end
 
-    puts("Создан новый вагон <#{Car.list.last.number}>")
+    puts("Создан новый вагон <#{Car.all.last.number}>")
   end
 
   def add_wagon_to_train
@@ -182,10 +182,10 @@ class TrainApp
   end
 
   def list_all_trains
-    Train.list.each_with_index { |v, i| puts "#{i}. #{v.number}, #{v.type}" }
+    Train.all.each_with_index { |v, i| puts "#{i}. #{v.number}, #{v.type}" }
   end
   def print_cars
-    Car.list.each_with_index { |v, i| puts "#{i}. #{v.number}, #{v.type}" }
+    Car.all.each_with_index { |v, i| puts "#{i}. #{v.number}, #{v.type}" }
   end
 
   def show_actions_prompt
